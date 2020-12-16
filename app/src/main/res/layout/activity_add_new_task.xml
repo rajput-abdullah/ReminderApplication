@@ -1,0 +1,388 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:actionBarNavMode="standard"
+    app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/light_blue"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/enterTaskName"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="110dp"
+            android:gravity="left"
+            android:hint="@string/enter_task_name"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/white"
+            android:autofillHints="true"
+            tools:ignore="RtlHardcoded" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+
+            android:background="@color/light_blue"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingStart="2dp"
+            tools:ignore="RtlSymmetry">
+
+            <ImageButton
+                android:id="@+id/voice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/light_blue"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_keyboard_voice_24"
+                android:contentDescription="@string/todo12" />
+
+            <ImageButton
+                android:id="@+id/enterNumber"
+                android:inputType="phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/light_blue"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_baseline_add_ic_call_24" />
+
+            <ImageButton
+                android:id="@+id/contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/light_blue"
+
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_baseline_account_box_24" />
+
+            <ImageButton
+                android:id="@+id/enterTask"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:background="@color/light_blue"
+
+                android:src="@drawable/ic_baseline_keyboard_24" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/done"
+        android:layout_width="133dp"
+        android:layout_height="182dp"
+        android:layout_marginLeft="340dp"
+        android:layout_marginTop="170dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:id="@+id/layout1"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:gravity="center"
+                    android:id="@+id/dateimg"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_baseline_today_24" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textColorHint="@color/white"
+                    android:id="@+id/date"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:hint="Date"
+                     />
+
+                <TextView
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue"
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:hint="07/0/2020"
+                    android:layout_marginStart="125dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:id="@+id/layout2"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/timetimg"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_watch_later_24"
+                    />
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+
+                    android:color="@color/white"
+                    android:id="@+id/time"
+                    android:layout_width="80dp"
+                    android:layout_marginStart="20dp"
+                    android:textColorHint="@color/white"
+                    android:hint="Time"
+                    android:icon="@drawable/ic_baseline_calendar_today_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="12:10"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue"
+
+                    android:background="@android:color/transparent"
+                    android:id="@+id/timeText"
+                    android:layout_marginStart="160dp"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:id="@+id/layout3"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/repeatimg"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+
+                    android:src="@drawable/ic_baseline_loop_24"
+                    />
+
+                <TextView
+                    android:id="@+id/repeat"
+                    android:hint="Repeat"
+                    android:gravity="center"
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"                    android:layout_marginLeft="20dp"
+                    android:textColorHint="@color/white"
+                   />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="12:10:59"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue"
+
+                    android:id="@+id/repeatText"
+                    android:layout_marginStart="130dp"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:id="@+id/layout4"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/markerimg"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_baseline_radio_button_checked_24" />
+
+                <TextView
+                    android:id="@+id/marker"
+                    android:layout_width="90dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:hint="Marker"
+                    android:icon="@drawable/ic_baseline_calendar_today_24"
+                    android:textColorHint="@color/white" />
+
+                <TextView
+                    android:bottomRightRadius="35dp"
+                    android:bottomLeftRadius="35dp"
+                    android:topRightRadius="35dp"
+                    android:topLeftRadius="35dp"
+                    android:id="@+id/markerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="130dp"
+                    android:gravity="center"
+
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/layout5"
+
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/calendarimg"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_baseline_notifications_24"
+                    />
+
+                <TextView
+                    android:id="@+id/reportAs"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="14dp"
+                    android:gravity="center"
+                    android:hint="Report as"
+                    android:textColorHint="@color/white"
+ />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="@string/_12_10_59"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/light_blue"
+
+                    android:layout_marginStart="105dp"
+                    android:id="@+id/reportAsText"
+
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="360dp"
+                android:id="@+id/layout6"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/timerimg"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_baseline_timer_24"
+                    />
+
+                <TextView
+                    android:id="@+id/notify"
+                    android:hint="@string/notify"
+                    android:layout_width="85dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:textColorHint="@color/white"
+                     />
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="@string/_12_10_59"
+                    android:gravity="center"
+                    android:layout_marginStart="135dp"
+                    android:id="@+id/notifyText"
+                        android:textColor="@color/light_blue"
+
+                        android:background="@android:color/transparent"
+
+
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
